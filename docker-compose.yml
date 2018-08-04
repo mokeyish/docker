@@ -1,0 +1,10 @@
+version: '3'
+services:
+  pptp:
+    image: "mokeyish/component:pptp"
+    privileged: true
+    network_mode: "host"
+    volumes:
+      - /etc/ppp/chap-secrets:/etc/ppp/chap-secrets
+    #port:
+    #  - 1723:1723
