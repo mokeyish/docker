@@ -3,8 +3,11 @@ services:
   pptp:
     image: "mokeyish/component:pptp"
     privileged: true
-    network_mode: "host"
+    privileged: true
+    restart: always
+    port:
+     - 1723:1723
     volumes:
+      # - ./data/pptpd.conf:/etc/pptpd.conf
+      # - ./data/pptpd-options:/etc/ppp/pptpd-options
       - /etc/ppp/chap-secrets:/etc/ppp/chap-secrets
-    #port:
-    #  - 1723:1723
