@@ -5,7 +5,7 @@ services:
     privileged: true
     privileged: true
     restart: always
-    port:
+    ports:
      - 1723:1723
     volumes:
       # - ./data/pptpd.conf:/etc/pptpd.conf
